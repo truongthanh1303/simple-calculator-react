@@ -30,8 +30,8 @@ function App() {
           state.currentValStr,
           state.operator
         );
-        _state.currentValStr = newVal;
-        _state.holderValStr = newVal;
+        _state.currentValStr = newVal.toString();
+        _state.holderValStr = newVal.toString();
       } else {
         _state.holderValStr = _state.currentValStr;
       }
@@ -41,7 +41,7 @@ function App() {
       const _state = {
         ...state,
         currentValStr: state.isCalculating ?
-          num: appendNumber(state.currentValStr, num),
+          num.toString() : appendNumber(state.currentValStr, num),
         isCalculating: false
       };
 
@@ -64,8 +64,8 @@ function App() {
         state.currentValStr,
         state.operator
       );
-      _state.currentValStr = newVal;
-      _state.holderValStr = newVal;
+      _state.currentValStr = newVal.toString();
+      _state.holderValStr = newVal.toString();
       _state.isCalculating = true;
       setState(_state);
     },
